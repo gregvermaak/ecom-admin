@@ -8,12 +8,10 @@ const SetupPage = () => {
   const isOpen = useStoreModal((state) => state.isOpen)
 
   useEffect(() => {
-    if (!isOpen) {
-      onOpen()
-    }
+    if (!isOpen) onOpen()
   }, [isOpen, onOpen])
 
-  return <div className="p-4">Root Page</div>
+  return null
 }
 
 export default SetupPage
