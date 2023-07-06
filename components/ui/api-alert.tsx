@@ -1,3 +1,5 @@
+"use client"
+
 import { FC } from "react"
 import { toast } from "react-hot-toast"
 import { Copy, Server } from "lucide-react"
