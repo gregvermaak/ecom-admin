@@ -11,13 +11,13 @@ export async function GET(
     if (!params.billboardId)
       return new NextResponse("Billboard ID is required", { status: 400 })
 
-    const billboards = await prismadb.billboard.findUnique({
+    const billboard = await prismadb.billboard.findUnique({
       where: {
         id: params.billboardId,
       },
     })
 
-    return NextResponse.json(billboards)
+    return NextResponse.json(billboard)
   } catch (error) {
     console.log("[BILLBOARD_GET]", error)
     return new NextResponse("Internal error", { status: 500 })
