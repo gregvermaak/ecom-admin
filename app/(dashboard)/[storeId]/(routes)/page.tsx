@@ -6,11 +6,11 @@ interface DashboardPageProps {
 }
 
 const page: FC<DashboardPageProps> = async ({ params }) => {
-  const store = await prismadb.store.findFirst({
-    where: { id: params.storeId },
-  })
-
-  return <div>Active Store: {store?.name}</div>
+  return (
+    <div className="flex-col">
+      <div></div>
+    </div>
+  )
 }
 
 export default page
